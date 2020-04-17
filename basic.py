@@ -9,6 +9,7 @@ for x in range(1,11):
 saveFile.close()
 
 readFile = open("Guessnumber.py", "r")
+print("aman")
 content = readFile.read()
 print(content)
 
