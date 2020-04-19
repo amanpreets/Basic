@@ -1,16 +1,14 @@
-text = "hello Jaskaran\n"
-
-saveFile = open("exampleFile.txt","w")
-saveFile.write(text)
-
-for x in range(1,11):
-    saveFile.write(text)
-
-saveFile.close()
-
-readFile = open("Guessnumber.py", "r")
-print("aman")
-content = readFile.read()
+readFile = open("words.txt", "r")
+content = readFile.readlines()
+writeFile = open("exampleFile.txt", "w")
 print(content)
+listofwords = []
+for line in content:
+    strippedline =line.strip()
+    if(len(strippedline) == 5) :
+        listofwords.append(strippedline)
+        print(strippedline)
+        writeLine = strippedline + "\n"
+        writeFile.write(writeLine)
 
-
+writeFile.close()
